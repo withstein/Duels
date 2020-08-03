@@ -77,20 +77,20 @@ supported-plugins:
   LeaderHeads:
     wins:
       menu:
-        # Menu title for the leaderboard 'duelsre-wins'.
-        # default: 'Duel Wins'
-        title: 'Duel Wins'
-        # Menu open command for the leaderboard 'duelsre-wins'.
-        # default: 'openwins'
-        open-command: 'openwins'
+        # Menu title for the leaderboard 'duelsre-Zaferler'.
+        # default: 'Duel Zaferler'
+        title: 'Düello Zaferleri'
+        # Menu open command for the leaderboard 'duelsre-Zaferler'.
+        # default: 'openZaferler'
+        open-command: 'open Zaferler'
     losses:
       menu:
         # Menu title for the leaderboard 'duelsre-losses'.
         # default: 'Duel Losses'
-        title: 'Duel Losses'
+        title: 'Düello Bozgunları'
         # Menu open command for the leaderboard 'duelsre-losses'.
         # default: 'openlosses'
-        open-command: 'openlosses'
+        open-command: 'open Bozgunlar'
 
 
 request:
@@ -404,12 +404,12 @@ countdown:
   # %kit% - Name of the kit used in this match. If players are using their own inventory, it will display 'none'
   # %arena% - Name of the arena used for this match.
   messages:
-    - '&7Starting in &f5 &7seconds!'
-    - '&7Starting in &f4 &7seconds!'
-    - '&7Starting in &f3 &7seconds!'
-    - '&7Starting in &f2 &7seconds!'
-    - '&7Starting in &f1 &7second!'
-    - '&7Now in a match against &f%opponent%&7(&a%opponent_rating%&7) with kit &3%kit% &7in arena &e%arena%&7.'
+    - '&7Başlamaya &f5 &7saniye!'
+    - '&7Başlamaya &f4 &7saniye!'
+    - '&7Başlamaya &f3 &7saniye!'
+    - '&7Başlamaya &f2 &7saniye!'
+    - '&7Başlamaya &f1 &7second!'
+    - '&f%opponent%&7(&a%opponent_rating%&7) kişisi ile maçın &3%kit% &7kiti ile &e%arena%&7 arenasında başladı.'
 
   # Titles to display along with the countdown. Must have the same size as the countdown list size.
   # NOTE: Titles will only display on 1.8 or above!
@@ -419,7 +419,7 @@ countdown:
     - '&e&l3'
     - '&6&l2'
     - '&c&l1'
-    - '&a&lGO!'
+    - '&a&lBAŞLA!'
 
   prevent:
     # If set to 'true', movements will be cancelled while the countdown is ongoing.
@@ -461,17 +461,17 @@ top:
   # Type and identifier of the data displayed in /duel top [wins|losses|kit].
   displayed-replacers:
     wins:
-      type: 'Wins'
-      identifier: 'wins'
+      type: 'Zaferler'
+      identifier: 'Zaferler'
     losses:
-      type: 'Losses'
-      identifier: 'losses'
+      type: 'Bozgunlar'
+      identifier: 'Bozgunlar'
     kit:
       type: '%kit%'
-      identifier: 'rating'
+      identifier: 'Değerlendirme'
     no-kit:
-      type: 'Own Inventory'
-      identifier: 'rating'
+      type: 'Kendi Enva"nteri'
+      identifier: 'Değerlendirme'
 
 
 guis:
@@ -542,33 +542,33 @@ sounds:
     pitch: 0.95
     volume: 1.0
     trigger-messages:
-    - '&7Starting in &f5 &7seconds!'
-    - '&7Starting in &f4 &7seconds!'
-    - '&7Starting in &f3 &7seconds!'
-    - '&7Starting in &f2 &7seconds!'
-    - '&7Starting in &f1 &7second!'
+    - '&7Başlamaya &f5 &7saniye!'
+    - '&7Başlamaya &f4 &7saniye!'
+    - '&7Başlamaya &f3 &7saniye!'
+    - '&7Başlamaya &f2 &7saniye!'
+    - '&7Başlamaya &f1 &7second!'
   # Remove this sound if your server version is 1.8 or lower!
   countdown-ongoing-sound-1-9:
     type: BLOCK_NOTE_PLING
     pitch: 0.95
     volume: 1.0
     trigger-messages:
-    - '&7Starting in &f5 &7seconds!'
-    - '&7Starting in &f4 &7seconds!'
-    - '&7Starting in &f3 &7seconds!'
-    - '&7Starting in &f2 &7seconds!'
-    - '&7Starting in &f1 &7second!'
+    - '&7Başlamaya &f5 &7saniye!'
+    - '&7Başlamaya &f4 &7saniye!'
+    - '&7Başlamaya &f3 &7saniye!'
+    - '&7Başlamaya &f2 &7saniye!'
+    - '&7Başlamaya &f1 &7second!'
   # Remove this sound if your server version is above 1.8!
   countdown-end-sound-1-8:
     type: NOTE_PIANO
     pitch: 1.9
     volume: 1.0
     trigger-messages:
-    - '&7Now in a match against &f%opponent%&7(&a%opponent_rating%&7) with kit &3%kit% &7in arena &e%arena%&7.'
+    - '&f%opponent%&7(&a%opponent_rating%&7) kişisi ile maçın &3%kit% &7kiti ile &e%arena%&7 arenasında başladı.'
   # Remove this sound if your server version is 1.8 or lower!
   countdown-end-sound-1-9:
     type: BLOCK_NOTE_PLING
     pitch: 1.9
     volume: 1.0
     trigger-messages:
-    - '&7Now in a match against &f%opponent%&7(&a%opponent_rating%&7) with kit &3%kit% &7in arena &e%arena%&7.'
+    - '&f%opponent%&7(&a%opponent_rating%&7) kişisi ile maçın &3%kit% &7kiti ile &e%arena%&7 arenasında başladı.'
