@@ -4,28 +4,28 @@ config-version: 8
 # Define placeholders usable in any message below.
 # Example: Adding 'PREFIX: "[Cool]"' below and then putting '{PREFIX}' in a message will display '[Cool]' when the message is sent in game.
 STRINGS:
-  PREFIX: '&9[Duels]'
+  PREFIX: '&9[Düello]'
   LINE: '&9&m------------------------------------&r'
   HALF_LINE: '&9&m----------------&r'
-  FAIL_PREFIX: '&cFailed to start the match:'
+  FAIL_PREFIX: '&cMaç başlatılırken hata oluştu:'
 
 
 GENERAL:
-  true: '&atrue'
-  false: '&cfalse'
-  enabled: '&aenabled'
-  disabled: '&cdisabled'
-  not-selected: 'Not Selected'
-  random: 'Random'
-  none: 'none'
-  kit-selector: 'Kit Selector'
-  arena-selector: 'Arena Selector'
-  item-betting: 'Item Betting'
-  betting: 'Betting'
+  true: '&adoğru'
+  false: '&cyanlış'
+  enabled: '&aaktif'
+  disabled: '&cdeaktif'
+  not-selected: 'Seçilmedi'
+  random: 'Rasgele'
+  none: 'Hiçbiri'
+  kit-selector: 'Kit Seçici'
+  arena-selector: 'Arena Seçici'
+  item-betting: 'Eşya Yatırma'
+  betting: 'İddialar'
 
 
 ERROR:
-  no-permission: '{PREFIX} &cNope! You are lacking the following permission: ''%permission%'''
+  no-permission: '{PREFIX} &cHopp! Şu yetkiye sahip değilsin: ''%permission%'''
   data:
     load-failure: '{PREFIX} &cCould not load your duel stats. Please try re-logging.'
     not-loaded: '{PREFIX} &cUsers are still under load, please try again later.'
