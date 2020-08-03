@@ -109,66 +109,66 @@ COMMAND:
       send:
         sender:
         - '{LINE}'
-        - '&7Duel request sent to &f%name%&7.'
+        - '&7Düello isteği şu kişiye yollandı: &f%name%&7.'
         - '&6- &7Kit: &3%kit%'
         - '&6- &7Arena: &e%arena%'
-        - '&6- &7Bet: &6$%bet_amount%'
-        - '&6- &7Item Betting: &r%item_betting%'
+        - '&6- &7Bahis: &6$%bet_amount%'
+        - '&6- &7Eşya Bahisi: &r%item_betting%'
         - '{LINE}'
         receiver:
         - '{LINE}'
-        - '&7Duel request received from &f%name%&7.'
+        - '&7Şu kişiden düello isteği alındı: &f%name%&7.'
         - '&6- &7Kit: &3%kit%'
         - '&6- &7Arena: &e%arena%'
-        - '&6- &7Bet: &6$%bet_amount%'
-        - '&6- &7Item Betting: &r%item_betting%'
+        - '&6- &7Bahis: &6$%bet_amount%'
+        - '&6- &7Eşya Bahisi: &r%item_betting%'
         clickable-text:
           info:
-            text: '&7Click to '
+            text: '&7Tıkla ve '
             hover-text: ''
           accept:
-            text: '&a&l[ACCEPT] '
-            hover-text: '&7Click to &aaccept &7this request.'
+            text: '&a&l[KABUL] '
+            hover-text: '&7Tıklayarak bu isteği &akabul &7edebilirsin.'
           deny:
-            text: '&c&l[DENY]'
-            hover-text: '&7Click to &cdeny &7this request.'
+            text: '&c&l[REDDET]'
+            hover-text: '&7Tıklayarak bu isteği &cret &7edebilirsin.'
           extra:
             text: '{LINE}'
             hover-text: ''
       accept:
-        sender: '{PREFIX} &f%name% &7has accepted your duel request.'
-        receiver: '{PREFIX} &7Accepted the duel request from &f%name%&7.'
+        sender: '{PREFIX} &f%name% &7düello isteğini kabul etti.'
+        receiver: '{PREFIX} &f%name%&7 kişisinden gelen düello isteği kabul edildi.'
       deny:
-        sender: '{PREFIX} &7Your duel request to &f%name% &7was denied.'
-        receiver: '{PREFIX} &7Denied the duel request from &f%name%&7.'
+        sender: '{PREFIX} &f%name% &7düello isteğini reddetti.'
+        receiver: '{PREFIX} &f%name%&7 kişisinden gelen düello isteği redd"edildi.'
     stats:
       displayed:
       - '{LINE}'
-      - '&7Stats of &f%name% &e-'
-      - '&7Wins: &a%wins%'
-      - '&7Losses: &c%losses%'
-      - '&7W/L Ratio: &b%wl_ratio%'
-      - '&7Requests: &r%requests_enabled%'
+      - '&7Bilgiler &f%name% &e-'
+      - '&7Zafer: &a%wins%'
+      - '&7Bozgun: &c%losses%'
+      - '&7Z/B Oranı: &b%wl_ratio%'
+      - '&7İstekler: &r%requests_enabled%'
       # NOTE: Ratings will only display if either 'display-kit-ratings' or 'display-nokit-rating' is enabled in the configuration.
       rating:
-        header: '&7Ratings &e-'
+        header: '&7Puanlar &e-'
         format: '&f%type%&7: &b%rating%'
         footer: ''
       # NOTE: Past matches will only display if 'display-past-matches' is enabled in the configuration.
       match:
-        header: '&7Recent Matches &e-'
-        format: '&a%winner% &fvs &c%loser% &6[Hover Me!]'
+        header: '&7Son Maçlar &e-'
+        format: '&a%winner% &fvs &c%loser% &6[Üstüme gel"!]'
         hover-text:
         - '&7Kit: &3%kit%'
-        - '&7Duration: &a%duration%'
-        - '&7Time: &f%time% ago'
-        - '&7Health: &d%health%❤'
+        - '&7SÜRE: &a%duration%'
+        - '&7Zaman: &f%time% önce'
+        - '&7Can: &d%health%❤'
         footer: '{LINE}'
     toggle:
-      enabled: '{PREFIX} &aYou are now receiving duel requests.'
-      disabled: '{PREFIX} &cYou are no longer accepting duel requests.'
+      enabled: '{PREFIX} &aArtık düello isteği alıyorsun.'
+      disabled: '{PREFIX} &cArtık düello isteği almayacaksın.'
     top:
-      next-update: '{PREFIX} &7Next update: &f%remaining%'
+      next-update: '{PREFIX} &7Sıradaki Güncelleme: &f%remaining%'
       header: '{HALF_LINE} &7Top &f10 &7%type% {HALF_LINE}'
       display-format: '&e%rank%. &f%name% &e- &f%score% &7%identifier%'
       footer: '{HALF_LINE} &7Top &f10 &7%type% {HALF_LINE}'
@@ -176,17 +176,17 @@ COMMAND:
   duels:
     usage:
     - '{LINE}'
-    - '&f/%command% help &e- &7Displays this page.'
-    - '&f/%command% help arena &e- &7Displays a list of arena commands.'
-    - '&f/%command% help kit &e- &7Displays a list of kit commands.'
-    - '&f/%command% help queue &e- &7Displays a list of queue commands.'
-    - '&f/%command% help sign &e- &7Displays a list of sign commands.'
-    - '&f/%command% help user &e- &7Displays a list of user edit commands.'
-    - '&f/%command% help extra &e- &7Displays a list of extra commands.'
+    - '&f/%command% help &e- &7Bu sayfayı gösterir.'
+    - '&f/%command% help arena &e- &7Arena komutları listesini gösterir.'
+    - '&f/%command% help kit &e- &7Kit komutları listesini gösterir.'
+    - '&f/%command% help queue &e- &7Sıra komutları listesini gösterir.'
+    - '&f/%command% help sign &e- &7Tabela komutları listesini gösterir.'
+    - '&f/%command% help user &e- &7Oyuncu düzenlemeleri komutları listesini gösterir.'
+    - '&f/%command% help extra &e- &7Ekstra komutları listesini gösterir.'
     - '{LINE}'
     help:
       arena:
-      - '{HALF_LINE} &fArena Commands {HALF_LINE}'
+      - '{HALF_LINE} &fKomutları {HALF_LINE}'
       - '&f/%command% create [name] &e- &7Creates an arena with given name.'
       - '&f/%command% set [name] [1|2] &e- &7Sets the teleport position of an arena.'
       - '&f/%command% delete [name] &e- &7Deletes an arena.'
@@ -245,18 +245,18 @@ COMMAND:
     add-sign: '{PREFIX} &7Created queue sign at &f%location% &7with kit &3%kit% &7and bet &6$%bet_amount%&7.'
     del-sign: '{PREFIX} &7Deleted queue sign at &f%location% &7with kit &3%kit% &7and bet &6$%bet_amount%&7.'
     set-lobby: '{PREFIX} &7Duel lobby set at your current location.'
-    lobby: '{PREFIX} &7You have been teleported to lobby!'
+    lobby: '{PREFIX} &7Lobiye ışınlandın!'
     edit: '{PREFIX} &7Following action has been executed for &f%name%&7: &f%action% %amount% %type%'
     set-rating: '{PREFIX} &f%name%&7''s rating for kit &3%kit% &7was set to &a%rating%&7.'
     reset-rating: '{PREFIX} &7Reset &f%name%&7''s rating for kit &3%kit%&7.'
     reset: '{PREFIX} &7Reset &f%name%&7''s stats.'
     info:
     - '{HALF_LINE} &7Arena &e%name% {HALF_LINE}'
-    - '&7In Use: &r%in_use%'
-    - '&7Disabled: &r%disabled%'
-    - '&7Bound Kits: &3%kits%'
-    - '&7Positions: &f%positions%'
-    - '&7Players: &f%players%'
+    - '&7Durum: &r%in_use%'
+    - '&7Hizmet Durumu: &r%disabled%'
+    - '&7Bağlı Kitler: &3%kits%'
+    - '&7Pozisyonlar: &f%positions%'
+    - '&7Oyuncular: &f%players%'
     - '{HALF_LINE} &7Arena &e%name% {HALF_LINE}'
     list:
     - '{LINE}'
@@ -274,190 +274,190 @@ COMMAND:
   spectate:
     usage:
     - '{LINE}'
-    - '&f/spectate [player] &e- &7Spectates the a player in duel.'
+    - '&f/spectate [player] &e- &7Düellodaki oyuncuyu izler.'
     - '{LINE}'
-    start-spectate: '{PREFIX} &7You are now spectating &f%name%&7.'
-    stop-spectate: '{PREFIX} &7You are no longer spectating &f%name%&7.'
+    start-spectate: '{PREFIX} &7Şu kişiyi izliyorsun: &f%name%&7.'
+    stop-spectate: '{PREFIX} &7Artık şu kişiyi izlemiyorsun: &f%name%&7.'
 
   sub-command-usage: '{PREFIX} &f/%command% %usage% &e- &7%description%'
 
 
 DUEL:
   start-failure:
-    no-kit-selected: '{FAIL_PREFIX} No kit was selected!'
-    in-blacklisted-world: '{FAIL_PREFIX} You or your opponent is in a blacklisted world!'
-    is-tagged: '{FAIL_PREFIX} You or your opponent is in combat!'
-    player-moved: '{FAIL_PREFIX} You or your opponent moved after sending/accepting the request!'
-    not-in-duelzone: '{FAIL_PREFIX} You or your opponent moved out of the duelzone sending/accepting the request!'
-    in-creative-mode: '{FAIL_PREFIX} You or your opponent is in creative mode!'
-    no-arena-available: '{FAIL_PREFIX} No arenas are currently available. Please try again later.'
-    arena-in-use: '{FAIL_PREFIX} That arena is already in use. Please select a different arena.'
-    arena-not-applicable: '{FAIL_PREFIX} You cannot use kit %kit% on this arena.'
-    not-enough-money: '{FAIL_PREFIX} You or your opponent does not have $%bet_amount%.'
+    no-kit-selected: '{FAIL_PREFIX} Hiçbir kit seçilmedi!'
+    in-blacklisted-world: '{FAIL_PREFIX} Sen veya Rakibin yasaklı dünyada bulunuyor!'
+    is-tagged: '{FAIL_PREFIX} Sen veya Rakibin şuan savaşta!'
+    player-moved: '{FAIL_PREFIX} Sen veya Rakibin istek atarken/kabul ederken hareket etti!'
+    not-in-duelzone: '{FAIL_PREFIX} Sen veya Rakibin isteği atarken/kabul ederken düello alanından çıktı!'
+    in-creative-mode: '{FAIL_PREFIX} Sen veya Rakibinin oyun modu yaratıcıda!'
+    no-arena-available: '{FAIL_PREFIX} Tüm arenalar meşgul. Lütfen sonra tekrar deneyin.'
+    arena-in-use: '{FAIL_PREFIX} Bu arena kullanımda, lütfen başka arena seçin.'
+    arena-not-applicable: '{FAIL_PREFIX} %kit% kitini bu arenada kullanamazsın.'
+    not-enough-money: '{FAIL_PREFIX} Sen veya Rakibin $%bet_amount% bahis miktarını karşılayamıyor.'
   prevent:
-    item-drop: '&cYou cannot drop items while in a duel.'
-    command: '&cYou cannot use ''%command%'' while in a duel.'
-    teleportation: '&cYou cannot teleport while in a duel.'
-    inventory-open: '&cYou cannot open inventories while in a duel.'
-  projectile-hit-message: '{PREFIX} &f%name% &7is now at &d%health%❤&7!'
+    item-drop: '&cDüelloda eşya atamazsın.'
+    command: '&cDüelloda ''%command%'' komudunu kullanamazsın.'
+    teleportation: '&cDüelloda ışınlanamazsın.'
+    inventory-open: '&cDüelloda envanter açamazsın.'
+  projectile-hit-message: '{PREFIX} &f%name% &7kişisinin canı: &d%health%❤&7!'
   on-end:
-    tie: '{PREFIX} &7Tie Game!'
-    plugin-disable: '{PREFIX} &cPlugin is disabling! Ending match automatically.'
-    opponent-defeat: '{PREFIX} &f%winner% &a(%winner_rating%) (+%change%) &7has defeated &f%loser% &c(%loser_rating%) (-%change%) &7on kit &3%kit% &7with &d%health%❤'
+    tie: '{PREFIX} &7Kravat Oyunu!'
+    plugin-disable: '{PREFIX} &cEklenti kapatılıyor! Maçınız sona erdiriliyor.'
+    opponent-defeat: '{PREFIX} &f%winner% &a(%winner_rating%) (+%change%) &7&f%loser% &c(%loser_rating%) (-%change%) &7kişisini &3%kit% kiti ile &d%health%❤ kalple yendi!'
   inventories:
-    message: '&7Inventories (click on the name to view): '
+    message: '&7Envanterler (İncelemek için isme tıkla): '
     name-color: '&b'
   reward:
     money:
-      message: '{PREFIX} &7You have received &6$%money% &7for winning against &f%name%&7!'
-      title: '&eYOU WON &6$%money%&e!'
+      message: '{PREFIX} &f%name% &7kişisini yendiğin için &6$%money% &7para kazandın&7!'
+      title: '&eKAZANILAN: &6$%money%&e!'
     items:
-      message: '{PREFIX} &7You have received &f%name%&7''s items for winning!'
+      message: '{PREFIX} &f%name%&7 kişisini yendiğin için eşyalarını aldın!'
 
 
 QUEUE:
-  add: '{PREFIX} &7You have been added to the queue for kit &3%kit% &7and bet &6$%bet_amount%&7. Click the sign again or type &f/duel leave &7to leave the queue.'
-  remove: '{PREFIX} &7You have been removed from the queue.'
-  found-opponent: '{PREFIX} &7Opponent found: &f%name%&7! Starting match with kit &3%kit% &7and a bet of &6$%bet_amount%&7...'
+  add: '{PREFIX} &7Sıraya &3%kit% &7kiti ve &6$%bet_amount%&7 bahsiyle koyuldun. Çıkmak için tekrar tabelaya tıkla veya &f/duel leave &7yaz.'
+  remove: '{PREFIX} &7Sıradan çıkarıldın.'
+  found-opponent: '{PREFIX} &7Rakip bulundu: &f%name%&7! Maç &3%kit% &7kiti ve &6$%bet_amount%&7 bahsiyle başlatılıyor...'
 
 
 SIGN:
   format:
-  - '&a[Click to Join]'
+  - '&a[Sıraya Gir]'
   - '&3%kit%&f:&e$%bet_amount%'
-  - '&f&l%in_queue% IN QUEUE'
-  - '&f&l%in_match% IN MATCH'
+  - '&f&l%in_queue% SIRADA'
+  - '&f&l%in_match% MAÇTA'
 
 
 SPECTATE:
   stop-item:
-    name: '&cStop Spectating'
-  arena-broadcast: '{PREFIX} &f%name% &7is now spectating the match!'
-  match-end: '{PREFIX} &7The match you were spectating has ended.'
+    name: '&cİzlemeyi Bırak'
+  arena-broadcast: '{PREFIX} &f%name% &7şuan maçınızı izliyor!'
+  match-end: '{PREFIX} &7İzlediğin maç sona erdi.'
   prevent:
-    item-drop: '&cYou cannot drop items while in spectator mode.'
-    command: '&cYou cannot use ''%command%'' while in spectator mode.'
-    teleportation: '&cYou cannot teleport while in spectator mode.'
-    pvp: '&cYou cannot do this while in spectator mode.'
+    item-drop: '&cİzleyici modunda eşya atamazsın.'
+    command: '&c''%command%'' komudunu İzleyici modunda kullanamazsın.'
+    teleportation: '&cİzleyici modunda ışınlanamazsın.'
+    pvp: '&cİzleyici modunda bunu yapamazsın.'
 
 
 GUI:
   settings:
-    title: 'Request Settings'
+    title: 'İstek Ayarları'
     buttons:
       details:
-        name: '&9Request Details'
+        name: '&9İstek Detayları'
         lore:
-        - '&7Opponent: &f%opponent%'
+        - '&7Rakip: &f%opponent%'
         - '&7Kit: &3%kit%'
         - '&7Arena: &e%arena%'
-        - '&7Bet Items: &r%item_betting%'
-        - '&7Bet: &6$%bet_amount%'
+        - '&7Bahis Eşyaları: &r%item_betting%'
+        - '&7Bahis: &6$%bet_amount%'
         - ' '
-        - '&7To change the bet'
-        - '&7amount, please type'
-        - '&b/duel %opponent% [amount]'
+        - '&7Bahisi miktarını'
+        - '&7değiştirmek için;'
+        - '&b/duel %opponent% [miktar]'
       kit-selector:
-        name: '&9Kit Selection'
+        name: '&9Kit Seçimi'
         lore:
-        - '&7Selected Kit: &3%kit%'
+        - '&7Seçili Kit: &3%kit%'
         - ' '
-        - '&aClick to Change Kit!'
+        - '&aTıkla ve Kiti değiştir!'
       arena-selector:
-        name: '&9Arena Selection'
+        name: '&9Arena Seçimi'
         lore:
-        - '&7Selected Arena: &e%arena%'
+        - '&7Seçili Arena: &e%arena%'
         - ' '
-        - '&aClick to Change Arena!'
+        - '&aArenayı değiştirmek için tıkla!'
         lore-no-permission:
-        - '&cYou do not have permission to'
-        - '&cuse this option.'
+        - '&cBu ayarı değiştirmek için,'
+        - '&cYetkin bulunmamakta.'
       item-betting:
-        name: '&9Allow Betting Items'
+        name: '&9Eşya Bahisini Aç'
         lore:
-        - '&7Item Betting: &r%item_betting%'
+        - '&7Eşya Bahisi: &r%item_betting%'
         - ' '
-        - '&aClick to Toggle Item Betting!'
+        - '&aEşya bahsini açmak için tıkla!'
         lore-no-permission:
-        - '&cYou do not have permission to'
-        - '&cuse this option.'
+        - '&cBu ayarı değiştirmek için,'
+        - '&cYetkin bulunmamakta.'
       send:
-        name: '&a&lSEND REQUEST'
+        name: '&a&lİSTEK YOLLA'
       cancel:
-        name: '&c&lCANCEL'
+        name: '&c&lİTAP'
   kit-selector:
-    title: 'Kit Selection'
+    title: 'Kit Seçimi'
     buttons:
       previous-page:
-        name: '&aPrevious Page'
+        name: '&aÖnceki Sayfa'
       next-page:
-        name: '&aNext Page'
+        name: '&aSonraki Sayfa'
       empty:
-        name: '&cThis page is empty.'
+        name: '&cBu sayfa boş.'
   arena-selector:
-    title: 'Arena Selection'
+    title: 'Arena Seçimi'
     buttons:
       arena:
         name: '&e%name%'
         lore-available:
-        - '&aAvailable'
+        - '&aMüsait'
         lore-unavailable:
-        - '&cUnavailable'
+        - '&cMüsait Değil'
       previous-page:
-        name: '&aPrevious Page'
+        name: '&aÖnceki Sayfa'
       next-page:
-        name: '&aNext Page'
+        name: '&aSonraki Sayfa'
       empty:
-        name: '&cThis page is empty.'
+        name: '&cBu sayfa boş.'
   queues:
-    title: 'Available Queues'
+    title: 'Müsait Sıralar'
     buttons:
       queue:
         name: '&3%kit%'
         lore:
-        - '&7Bet: &6$%bet_amount%'
-        - '&7In Queue: &f%in_queue%'
-        - '&7In Match: &f%in_match%'
+        - '&7Bahis: &6$%bet_amount%'
+        - '&7Sırada: &f%in_queue%'
+        - '&7Maçta: &f%in_match%'
         - ' '
-        - '&a&lClick to Queue!'
+        - '&a&lTıkla ve Sıraya gir!'
       previous-page:
-        name: '&aPrevious Page'
+        name: '&aÖnceki Sayfa'
       next-page:
-        name: '&aNext Page'
+        name: '&aSonraki Sayfa'
       empty:
-        name: '&cThis page is empty.'
+        name: '&cBu sayfa boş.'
   item-betting:
-    title: 'Winner Takes All!'
+    title: 'Kazanan Herşeyi ALIR!'
     buttons:
       head:
         name: '&e%name%'
       state:
-        name-ready: '&a&lREADY'
-        name-not-ready: '&7&lNOT READY'
+        name-ready: '&a&lHAZIR'
+        name-not-ready: '&7&lHAZIR DEGIL'
       details:
-        name: '&9Match Details'
+        name: '&9Maç Detayları'
         lore:
         - '&7Kit: &3%kit%'
         - '&7Arena: &e%arena%'
-        - '&7Bet: &6$%bet_amount%'
+        - '&7Bahis: &6$%bet_amount%'
       cancel:
-        name: '&c&lCLICK TO CANCEL'
+        name: '&c&lIPTAL ICIN TIKLA'
         lore:
-        - '&7Click or close inventory'
-        - '&7to cancel the match.'
+        - '&7Maçı iptal etmek için'
+        - '&7tıkla veya envanteri kapat.'
   inventory-view:
     title: '&e%name%'
     buttons:
       head:
         name: '&e%name%'
       potion-counter:
-        name: '&d%potions% Health Potions'
+        name: '&d%potions% Can İksirleri'
       effects:
-        name: '&bPotion Effects'
+        name: '&bİksir Efektleri'
         lore-format: '&7%type% %amplifier% (%duration%s)'
       hunger:
-        name: '&6%hunger% bars'
-      health:
+        name: '&6%hunger% açlık barı'
+      Can:
         name: '&c%health% ❤'
   options:
     title: 'Kit: %kit%'
@@ -466,23 +466,23 @@ GUI:
         name: '&b%name%'
         lore:
           - ' '
-          - '&7Status: &r%state%'
+          - '&7Statüler: &r%state%'
           - ' '
-          - '&r&lCLICK TO TOGGLE'
+          - '&r&lAÇMAK ICIN TIKLA'
   bind:
     title: 'Kit: %kit%'
     buttons:
       arena:
         name: '&e%arena%'
         lore-bound:
-          - '&7Bound Kits: &3%kits%'
+          - '&7Bağlı Kitler: &3%kits%'
           - ' '
-          - '&a&lBOUND'
+          - '&a&lBAĞLI'
           - ' '
-          - '&r&lCLICK TO TOGGLE'
+          - '&r&lAÇMAK ICIN TIKLA'
         lore-not-bound:
-          - '&7Bound Kits: &3%kits%'
+          - '&7Bağlı Kitler: &3%kits%'
           - ' '
-          - '&c&lNOT BOUND'
+          - '&a&lBAĞLI DEGIL'
           - ' '
-          - '&r&lCLICK TO TOGGLE'
+          - '&r&lAÇMAK ICIN TIKLA'
